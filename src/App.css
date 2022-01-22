@@ -18,7 +18,7 @@ ol, ul {
 }
 
 .Square {
-  background: pink;
+  background: red;
   border: 1px solid blueviolet;
   float: left;
   font-size: 23px;
