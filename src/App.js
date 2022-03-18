@@ -1,23 +1,24 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
+
+
 import './App.css';
-
+import { quotes } from './components/quotes';
 import Game from './components/Game';
+let name1 = prompt('enter your name', 'first player')
+let name2 = prompt('enter your name', 'second player')
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
+const num = Math.floor(Math.random()*quotes.length)
+const App = () => {
+  
+  return (
+    <>
+    <h1 className='quote' >{quotes[num].text}</h1>
+    
+    <div className="App">
         
-      
-        
-        <Game/>
-        
-        
-        
-        
-      </div>
-    );
-  }
+      <Game name1={name1} name2={name2} />
+    </div>
+    </>
+  );
 }
+
 export default App;
